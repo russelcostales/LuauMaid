@@ -1,0 +1,1 @@
+{"name":"Maid","className":"DataModel","filePaths":["default.project.json"],"children":[{"name":"ReplicatedStorage","className":"ModuleScript","filePaths":["src\\init.luau"],"children":[{"name":"init.spec","className":"ModuleScript","filePaths":["src\\init.spec.luau"]}]}]}

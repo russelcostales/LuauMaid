@@ -1,0 +1,19 @@
+{
+    "name": "Maid",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Class": {
+                "$path": "src"
+            },
+            "TestEZ": {
+                "$path": "packages/testez"
+            }
+        },
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "$path": "tests"
+        }
+    }
+}
