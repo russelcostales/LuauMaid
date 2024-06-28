@@ -1,3 +1,11 @@
+-- Maid
+-- Russel Costales
+-- January 28, 2024
+
+-- Maid module for managing cleanup tasks.
+-- This module provides functionality to manage and clean up tasks such as connections, instances, and functions.
+-- Originally forked from Quenty's Maid to be strictly typed.
+
 --!strict
 
 type Task = RBXScriptConnection | { Destroy: (self: any) -> (), destroy: (self: any) -> () } | Instance
@@ -34,11 +42,16 @@ local function isCleanable(task: any): boolean
 		else false
 end
 
+--- Creates a new Maid instance.
+-- @return Maid - The created Maid instance.
 function Maid.new()
 	local self = setmetatable({ _tasks = {} } :: Maid, Maid)
 	return self
 end
 
+--- Adds a task to the Maid instance.
+-- @param task RBXScriptConnection | { Destroy: (self: any) -> (), destroy: (self: any) -> () } | Instance - The task to add.
+-- @return number - The unique ID assigned to the added task.
 function Maid:GiveTask(task)
 	assert(isCleanable(task), `maid: received uncleanable task: {typeof(task)}`)
 	local taskId: number = #self._tasks + 1
@@ -46,6 +59,7 @@ function Maid:GiveTask(task)
 	return taskId
 end
 
+--- Cleans up all tasks managed by the Maid instance.
 function Maid:DoCleaning()
 	local tasks: TaskTable = self._tasks
 
