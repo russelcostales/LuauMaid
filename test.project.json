@@ -4,11 +4,11 @@
         "$className": "DataModel",
         "ReplicatedStorage": {
             "$className": "ReplicatedStorage",
-            "Class": {
+            "Maid": {
                 "$path": "src"
             },
             "TestEZ": {
-                "$path": "packages/testez"
+                "$path": "Packages/TestEZ"
             }
         },
         "ServerScriptService": {
