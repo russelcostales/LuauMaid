@@ -13,7 +13,7 @@ return function()
 			myMaid = nil
 		end)
 
-		it("should add clean connections", function()
+		it("should disconnect connections", function()
 			local connection = workspace.ChildAdded:Connect(function()
 				print("child added")
 			end)
@@ -24,7 +24,7 @@ return function()
 			expect(connection.Connected).to.equal(false)
 		end)
 
-		it("should add destroy parts", function()
+		it("should destroy parts", function()
 			local part = Instance.new("Part")
 			part.Parent = workspace
 
@@ -73,19 +73,19 @@ return function()
 		end)
 
 		it("should have a destroy alias", function()
-			expect(maid.Destroy == maid.DoCleaning)
+			expect(maid.Destroy == maid.DoCleaning).to.equal(true)
 		end)
 
 		it("should have a camel case destroy alias", function()
-			expect(maid.destroy == maid.Destroy)
+			expect(maid.destroy == maid.Destroy).to.equal(true)
 		end)
 
 		it("should have a camel case doCleaning alias", function()
-			expect(maid.doCleaning == maid.DoCleaning)
+			expect(maid.doCleaning == maid.DoCleaning).to.equal(true)
 		end)
 
 		it("should have a camel case giveTask alias", function()
-			expect(maid.giveTask == maid.GiveTask)
+			expect(maid.giveTask == maid.GiveTask).to.equal(true)
 		end)
 	end)
 end
