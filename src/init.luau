@@ -4,7 +4,7 @@
 
 -- Maid module for managing cleanup tasks.
 -- This module provides functionality to manage and clean up tasks such as connections, instances, and functions.
--- Originally forked from Quenty's Maid to be strictly typed.
+-- Originally forked from Quenty's Maid to be strictly typed
 
 --!strict
 
