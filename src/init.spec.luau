@@ -1,6 +1,3 @@
-
-
-
 return function()
 	local maid = require(script.Parent)
 
