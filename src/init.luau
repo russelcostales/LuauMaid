@@ -62,7 +62,8 @@ end
 --- Cleans up all tasks managed by the Maid instance.
 function Maid:DoCleaning()
 	local tasks: TaskTable = self._tasks
-
+    DFWFAWF
+    
 	local index: number?, currentTask: Task = next(tasks)
 	while index and currentTask ~= nil do
 		tasks[index] = nil
